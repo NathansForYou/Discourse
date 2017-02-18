@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "367932042469",
+    "firebase_url": "https://discourse-1f594.firebaseio.com",
+    "project_id": "discourse-1f594",
+    "storage_bucket": "discourse-1f594.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367932042469:android:b6d79ee42e060137",
+        "android_client_info": {
+          "package_name": "alice.domnom.rippagebalancedbros.discourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367932042469-vgt98qelq5laqbpoknabp019dlbek6tb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [{ "current_key": "" }],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

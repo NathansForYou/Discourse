@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.twilio;
 
 public class DisplayIssue extends AppCompatActivity {
 
@@ -26,4 +27,10 @@ public class DisplayIssue extends AppCompatActivity {
         Intent intent = new Intent(this, ReflectionPrompt.class);
         startActivity(intent);
     }
+
+    public void startDiscourse (View view) {
+        //Intent intent = new Intent(this, VideoActivity.class);
+        //startActivity(intent);
+    }
+}
 }

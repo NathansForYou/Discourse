@@ -38,6 +38,8 @@ public class IssueReflections extends AppCompatActivity {
         addCardToList(card2);
     }
 
+
+
     public CardView createCard(String message, String user, int numLoves) {
         CardView card = new CardView(getApplicationContext());
 

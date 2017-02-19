@@ -49,6 +49,8 @@ public class VideoActivity extends AppCompatActivity {
      */
     private static final String TWILIO_ACCESS_TOKEN = "TWILIO_ACCESS_TOKEN";
 
+
+
     /*
      * The Video Client allows a client to connect to a room
      */
@@ -97,9 +99,9 @@ public class VideoActivity extends AppCompatActivity {
         videoStatusTextView = (TextView) findViewById(R.id.video_status_textview);
 
         connectActionFab = (FloatingActionButton) findViewById(R.id.connect_action_fab);
-        switchCameraActionFab = (FloatingActionButton) findViewById(R.id.switch_camera_action_fab);
-        localVideoActionFab = (FloatingActionButton) findViewById(R.id.local_video_action_fab);
-        muteActionFab = (FloatingActionButton) findViewById(R.id.mute_action_fab);
+        //switchCameraActionFab = (FloatingActionButton) findViewById(R.id.switch_camera_action_fab);
+        //localVideoActionFab = (FloatingActionButton) findViewById(R.id.local_video_action_fab);
+        //muteActionFab = (FloatingActionButton) findViewById(R.id.mute_action_fab);
 
         /*
          * Enable changing the volume using the up/down keys during a conversation
@@ -142,9 +144,11 @@ public class VideoActivity extends AppCompatActivity {
                 createLocalMedia();
                 createVideoClient();
             } else {
+
                 Toast.makeText(this,
                         R.string.permissions_needed,
                         Toast.LENGTH_LONG).show();
+
             }
         }
     }
@@ -210,9 +214,15 @@ public class VideoActivity extends AppCompatActivity {
         if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA) ||
                 ActivityCompat.shouldShowRequestPermissionRationale(this,
                         Manifest.permission.RECORD_AUDIO)) {
-            Toast.makeText(this,
-                    R.string.permissions_needed,
-                    Toast.LENGTH_LONG).show();
+            ActivityCompat.requestPermissions(
+                    this,
+                    new String[]{Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO},
+                    CAMERA_MIC_PERMISSION_REQUEST_CODE);
+
+//            Toast.makeText(this,
+//                    R.string.permissions_needed,
+//                    Toast.LENGTH_LONG).show();
+
         } else {
             ActivityCompat.requestPermissions(
                     this,
@@ -266,12 +276,12 @@ public class VideoActivity extends AppCompatActivity {
                 R.drawable.ic_call_white_24px));
         connectActionFab.show();
         connectActionFab.setOnClickListener(connectActionClickListener());
-        switchCameraActionFab.show();
-        switchCameraActionFab.setOnClickListener(switchCameraClickListener());
-        localVideoActionFab.show();
-        localVideoActionFab.setOnClickListener(localVideoClickListener());
-        muteActionFab.show();
-        muteActionFab.setOnClickListener(muteClickListener());
+        //switchCameraActionFab.show();
+        //switchCameraActionFab.setOnClickListener(switchCameraClickListener());
+        //localVideoActionFab.show();
+        //localVideoActionFab.setOnClickListener(localVideoClickListener());
+        //muteActionFab.show();
+        //muteActionFab.setOnClickListener(muteClickListener());
     }
 
     /*

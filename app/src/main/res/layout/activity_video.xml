@@ -6,9 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+
     tools:context="alice.domnom.rippagebalancedbros.discourse.VideoActivity">
 
-    <include layout="@layout/content_video" />
+    <include layout="@layout/content_video"
+        android:id="@+id/include"
+        />
 
     <ProgressBar
         android:id="@+id/progressBar1"
@@ -38,19 +41,32 @@
         android:fontFamily="sans-serif-light"
         android:layout_alignParentStart="true" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/connect_action_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_call_white_24px" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal" >
 
-    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity = "bottom|right"
+
+        >
+
+        <Button
+            android:id="@+id/discussButton"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:text="Exit"
+            android:textColor="@color/issueButtonColor"
+            android:background= "@color/colorExit"
+            android:textSize="17sp"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="12dp"
+            android:onClick="goToReflection"
+             />
+    </RelativeLayout>
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>

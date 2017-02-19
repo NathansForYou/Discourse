@@ -19,7 +19,12 @@ public class ReflectionPrompt extends AppCompatActivity {
     }
 
     public void goToIssueReflections(View view) {
+        TextView textview = (TextView) findViewById(R.id.text_input_reflection);
+        String reflectionMessage = textview.getText().toString();
+
         Intent intent = new Intent(this, IssueReflections.class);
+        intent.putExtra("reflectionMessage", reflectionMessage);
+
         startActivity(intent);
     }
 }

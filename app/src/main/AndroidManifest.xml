@@ -17,7 +17,7 @@
         <activity android:name=".VideoActivity" />
         <activity android:name=".DisplayIssue" />
         <activity android:name=".ReflectionPrompt" />
-        <activity android:name=".IssueReflections">
+        <activity android:name=".IssueReflections" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

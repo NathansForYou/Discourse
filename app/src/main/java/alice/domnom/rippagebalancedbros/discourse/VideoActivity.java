@@ -91,8 +91,13 @@ public class VideoActivity extends AppCompatActivity {
     private boolean disconnectedFromOnDestroy;
 
     // our variables
-    private String[] phaseMessages = {"Define the issue.", "Listen to them define the issue.", "What should we do about it?"};
-    private int[] phaseLengths = {234, 234234, 23434};
+    private String[] phaseMessages = {"Define the issue!",
+            "Listen!",
+            "What should be done about it?",
+            "Listen!",
+            "Discuss the issue!"
+            };
+    private int[] phaseLengths = {30000, 30000, 30000, 30000, 120000};
     private int currentPhase = 0;
     private int numPhases = 5;
 
@@ -109,7 +114,7 @@ public class VideoActivity extends AppCompatActivity {
         thumbnailVideoView = (VideoView) findViewById(R.id.thumbnail_video_view);
         videoStatusTextView = (TextView) findViewById(R.id.video_status_textview);
 
-        connectActionFab = (FloatingActionButton) findViewById(R.id.connect_action_fab);
+        //connectActionFab = (FloatingActionButton) findViewById(R.id.connect_action_fab);
         //switchCameraActionFab = (FloatingActionButton) findViewById(R.id.switch_camera_action_fab);
         //localVideoActionFab = (FloatingActionButton) findViewById(R.id.local_video_action_fab);
         //muteActionFab = (FloatingActionButton) findViewById(R.id.mute_action_fab);
@@ -146,12 +151,11 @@ public class VideoActivity extends AppCompatActivity {
     }
 
     public void startCounter() {
-        new CountDownTimer(30000, 1000) {
+        new CountDownTimer(phaseLengths[currentPhase], 50) {
             TextView textView = (TextView) findViewById(R.id.countdown);
 
             public void onTick(long millisUntilFinished) {
                 int progress = (int) (100 * (1.0 - (millisUntilFinished / 30000.0)));
-                System.out.println("Progress: " + progress);
                 progressBar.setProgress(progress);
                 textView.setText(phaseMessages[currentPhase]);
             }
@@ -173,6 +177,12 @@ public class VideoActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ReflectionPrompt.class);
         startActivity(intent);
     }
+
+    public void goToReflection(View view) {
+        Intent intent = new Intent(this, ReflectionPrompt.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
@@ -317,10 +327,10 @@ public class VideoActivity extends AppCompatActivity {
      * The initial state when there is no active conversation.
      */
     private void intializeUI() {
-        connectActionFab.setImageDrawable(ContextCompat.getDrawable(this,
-                R.drawable.ic_call_white_24px));
-        connectActionFab.show();
-        connectActionFab.setOnClickListener(connectActionClickListener());
+        //connectActionFab.setImageDrawable(ContextCompat.getDrawable(this,
+                //R.drawable.ic_call_white_24px));
+        //connectActionFab.show();
+        //connectActionFab.setOnClickListener(connectActionClickListener());
         //switchCameraActionFab.show();
         //switchCameraActionFab.setOnClickListener(switchCameraClickListener());
         //localVideoActionFab.show();
@@ -333,10 +343,10 @@ public class VideoActivity extends AppCompatActivity {
      * The actions performed during disconnect.
      */
     private void setDisconnectAction() {
-        connectActionFab.setImageDrawable(ContextCompat.getDrawable(this,
-                R.drawable.ic_call_end_white_24px));
-        connectActionFab.show();
-        connectActionFab.setOnClickListener(disconnectClickListener());
+        //connectActionFab.setImageDrawable(ContextCompat.getDrawable(this,
+                //R.drawable.ic_call_end_white_24px));
+        //connectActionFab.show();
+        //connectActionFab.setOnClickListener(disconnectClickListener());
     }
 
     /*

@@ -36,6 +36,11 @@ public class IssueReflections extends AppCompatActivity {
 
         CardView card2 = createCard("What can I say, should have swerggled gotta mac. as;dfl kjas;ldfjk al;ksdj fl;akdf lkajsd ;flkjas;dl fkjas ;dlfkj a;sldfjk;alksdf", "the bros", 5);
         addCardToList(card2);
+
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("reflectionMessage");
+        CardView newCard = createCard(message, "Dan", 0);
+        addCardToList(newCard);
     }
 
     public CardView createCard(String message, String user, int numLoves) {

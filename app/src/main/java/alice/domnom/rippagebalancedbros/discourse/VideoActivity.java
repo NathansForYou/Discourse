@@ -3,6 +3,7 @@ package alice.domnom.rippagebalancedbros.discourse;
 import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.CountDownTimer;
 
 import com.google.gson.JsonObject;
 import com.koushikdutta.async.future.FutureCallback;
@@ -127,6 +129,24 @@ public class VideoActivity extends AppCompatActivity {
          * Set the initial state of the UI
          */
         intializeUI();
+        new CountDownTimer(30000, 1000) {
+            TextView textView = (TextView) findViewById(R.id.countdown);
+
+            public void onTick(long millisUntilFinished) {
+                textView.setText("" + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                textView.setText("done!");
+                goToReflectionPrompt();
+            }
+        }.start();
+
+    }
+
+    public void goToReflectionPrompt() {
+        Intent intent = new Intent(this, ReflectionPrompt.class);
+        startActivity(intent);
     }
 
     @Override

@@ -22,8 +22,15 @@ public class DisplayIssue extends AppCompatActivity {
 //        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_display_issue);
     }
 
+    public void goToDiscussion(View view){
+
+        Intent intent = new Intent(this, VideoActivity.class);
+
+        startActivity(intent);
+    }
     public void goToReflectionPrompt(View view) {
         Intent intent = new Intent(this, ReflectionPrompt.class);
+
         startActivity(intent);
     }
 }

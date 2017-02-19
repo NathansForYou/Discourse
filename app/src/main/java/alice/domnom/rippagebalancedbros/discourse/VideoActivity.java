@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.os.CountDownTimer;
@@ -40,6 +41,7 @@ import com.twilio.video.VideoRenderer;
 import com.twilio.video.VideoTrack;
 import com.twilio.video.VideoView;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class VideoActivity extends AppCompatActivity {
@@ -50,8 +52,6 @@ public class VideoActivity extends AppCompatActivity {
      * You must provide a Twilio Access Token to connect to the Video service
      */
     private static final String TWILIO_ACCESS_TOKEN = "TWILIO_ACCESS_TOKEN";
-
-
 
     /*
      * The Video Client allows a client to connect to a room
@@ -90,6 +90,15 @@ public class VideoActivity extends AppCompatActivity {
     private VideoRenderer localVideoView;
     private boolean disconnectedFromOnDestroy;
 
+    // our variables
+    private String[] phaseMessages = {"Define the issue.", "Listen to them define the issue.", "What should we do about it?"};
+    private int[] phaseLengths = {234, 234234, 23434};
+    private int currentPhase = 0;
+    private int numPhases = 5;
+
+    private ProgressBar progressBar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,23 +134,39 @@ public class VideoActivity extends AppCompatActivity {
             createVideoClient();
         }
 
+
         /*
          * Set the initial state of the UI
          */
         intializeUI();
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar1);
+
+        startCounter();
+    }
+
+    public void startCounter() {
         new CountDownTimer(30000, 1000) {
             TextView textView = (TextView) findViewById(R.id.countdown);
 
             public void onTick(long millisUntilFinished) {
-                textView.setText("" + millisUntilFinished / 1000);
+                int progress = (int) (100 * (1.0 - (millisUntilFinished / 30000.0)));
+                System.out.println("Progress: " + progress);
+                progressBar.setProgress(progress);
+                textView.setText(phaseMessages[currentPhase]);
             }
 
             public void onFinish() {
-                textView.setText("done!");
-                goToReflectionPrompt();
+                //textView.setText("done!");
+                currentPhase++;
+
+                if(currentPhase < numPhases) {
+                    startCounter();
+                } else {
+                    goToReflectionPrompt();
+                }
             }
         }.start();
-
     }
 
     public void goToReflectionPrompt() {

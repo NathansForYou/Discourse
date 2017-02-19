@@ -10,35 +10,48 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:layout_weight="100"
+    android:backgroundTint="#f7f7f7"
     android:text="Some text" android:background="@drawable/textbox"
     tools:context="alice.domnom.rippagebalancedbros.discourse.DisplayIssue">
 
-
-    <TextView
-        android:id="@+id/issueDescription"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
         android:layout_marginBottom = "30dp"
-
         android:layout_weight="50"
-        android:textSize="20sp"
-        android:padding = "10dp"
-        android:background="@drawable/textbox"
+        card_view:cardCornerRadius="1dp">
+
+        <TextView
+        android:id="@+id/issueDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:text="What would you do about Aleppo?"
+        android:textColor="#9b9999"
+        android:textSize="35sp"
+        android:padding = "20dp"
+        android:background = "#ffffff"
         android:fontFamily="sans-serif-light"
         android:layout_alignParentStart="true" />
+    </android.support.v7.widget.CardView>
 
     <Button
         android:id="@+id/discussButton"
-        android:layout_weight="20"
+        android:layout_weight="16.97"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:text="Discuss"
         android:textColor="@color/issueButtonColor"
+        android:background= "#88e15d"
         android:textSize="30sp"
-        android:fontFamily="sans-serif-light"
+        android:fontFamily="sans-serif"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="30dp"

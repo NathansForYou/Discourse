@@ -5,9 +5,12 @@
 
     <!--Issues Screen-->
     <dimen name="button_vertical_padding">15dp</dimen>
+    <dimen name="button_issues_text_size">35dp</dimen>
+
 
     <!--Video Activity-->
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="local_video_size">90dp</dimen>
     <dimen name="local_video_margin">16dp</dimen>
+
 </resources>

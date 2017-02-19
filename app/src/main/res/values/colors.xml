@@ -5,6 +5,16 @@
     <color name="colorAccent">#FF4081</color>
 
 
-    <color name="issueButtonColor">@android:color/white</color>
+    <color name="issueButtonColor">#fcfcfc</color>
+    <color name="issueButtonsTint">#c4c4c4</color>
+
+
+
+    <color name="White">#FFF</color>
+    <color name="Black">#000</color>
+    <color name="Grey">#7F7F7F</color>
+    <color name="DarkGrey">#4F4F4F</color>
+    <color name="Green">#0F0</color>
+    <color name="TransparentGrey">#7F000000</color>
 
 </resources>

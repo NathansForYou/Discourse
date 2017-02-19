@@ -29,9 +29,14 @@
                 android:layout_marginBottom="@dimen/button_vertical_padding"
                 android:text="Syria"
                 android:textColor="@color/issueButtonColor"
-                android:textSize="40sp"
+                android:textSize="@dimen/button_issues_text_size"
                 android:fontFamily="sans-serif-light"
-                android:onClick="describeIssue"/>
+                android:onClick="describeIssue"
+                android:background="@drawable/rsz_syria"
+                android:backgroundTint="@color/issueButtonsTint"
+                android:backgroundTintMode="multiply"
+
+                />
             <Button
                 android:id="@+id/button2"
                 android:layout_weight="1"
@@ -39,10 +44,15 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="@dimen/button_vertical_padding"
-                android:text="Syria"
+                android:text="Environment"
                 android:textColor="@color/issueButtonColor"
-                android:textSize="40sp"
-                android:fontFamily="sans-serif-light"/>
+                android:textSize="@dimen/button_issues_text_size"
+                android:fontFamily="sans-serif-light"
+                android:background="@drawable/rsz_factory"
+                android:backgroundTint="@color/issueButtonsTint"
+                android:backgroundTintMode="multiply"
+                />
+
             <Button
                 android:id="@+id/button3"
                 android:layout_weight="1"
@@ -50,10 +60,15 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="@dimen/button_vertical_padding"
-                android:text="Syria"
+                android:text="Immigration"
                 android:textColor="@color/issueButtonColor"
-                android:textSize="40sp"
-                android:fontFamily="sans-serif-light"/>
+                android:textSize="@dimen/button_issues_text_size"
+                android:fontFamily="sans-serif-light"
+                android:background="@drawable/rsz_ellisisland"
+                android:backgroundTint="@color/issueButtonsTint"
+                android:backgroundTintMode="multiply"
+                />
+
             <Button
                 android:id="@+id/button4"
                 android:layout_weight="1"
@@ -61,10 +76,15 @@
                 android:layout_height="100dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="@dimen/button_vertical_padding"
-                android:text="Syria"
+                android:text="North Korea"
                 android:textColor="@color/issueButtonColor"
-                android:textSize="40sp"
-                android:fontFamily="sans-serif-light"/>
+                android:textSize="@dimen/button_issues_text_size"
+                android:fontFamily="sans-serif-light"
+                android:background="@drawable/rsz_north_korea_march"
+                android:backgroundTint="@color/issueButtonsTint"
+                android:backgroundTintMode="multiply"
+                />
+
 
 
 

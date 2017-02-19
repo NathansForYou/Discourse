@@ -31,11 +31,17 @@ public class IssueReflections extends AppCompatActivity {
         setContentView(R.layout.activity_issue_reflections);
         linearLayout = (LinearLayout) findViewById(R.id.reflection_list);
 
-        CardView card = createCard("What can I say, shouldv gotta mac.", "the bros", 5);
-        addCardToList(card);
+//        CardView card = createCard("With the human tolls mounting, the US is getting more involved with Syria. How can we judge resources invovled?", "the bros", 5);
+//        addCardToList(card);
 
-        CardView card2 = createCard("What can I say, should have swerggled gotta mac. as;dfl kjas;ldfjk al;ksdj fl;akdf lkajsd ;flkjas;dl fkjas ;dlfkj a;sldfjk;alksdf", "the bros", 5);
+        CardView card2 = createCard("\"Turkey securing a buffer zone...provides safe regions but...\"", "the bros", 5);
         addCardToList(card2);
+        CardView card3 = createCard("\"the rebels...are more religious and variant...conservative varieties of Sharia\"", "the bros", 5);
+        addCardToList(card3);
+        CardView card4 = createCard("\"The UN gathered ... each time a proxy war ...without the good for Syrian people.\"", "the bros", 5);
+        addCardToList(card4);
+        CardView card5 = createCard("\"Supporting Turkey and the Arab League.. working with Russia and China in cooporation for further economic actions\"", "the bros", 5);
+        addCardToList(card5);
 
         Intent intent = getIntent();
         String message = intent.getStringExtra("reflectionMessage");
@@ -54,16 +60,17 @@ public class IssueReflections extends AppCompatActivity {
         // L T R B
 
         int px15 = spToPx(15);
+        int px10 = spToPx(10);
 
-        params.setMargins(px15, 0, px15, px15);
+        params.setMargins(px15, 0, px15, px10);
         card.setLayoutParams(params);
 
         card.setRadius(1);
         // L T R B
         //card.setContentPadding(px15, 0, px15, 0);
         card.setCardBackgroundColor(Color.parseColor("#ffffff"));
-        card.setMaxCardElevation(15);
-        card.setCardElevation(9);
+        card.setMaxCardElevation(5);
+        card.setCardElevation(3);
 
         // Initialize a new TextView to put in CardView
         TextView tv = new TextView(getApplicationContext());

@@ -16,9 +16,9 @@ public class DisplayIssue extends AppCompatActivity {
         setContentView(R.layout.activity_display_issue);
 
         Intent intent = getIntent();
-        //TextView textView = (TextView) findViewById(R.id.issueDescription);
-        //textView.setText("Syria is ripping its prip. What would YOU do about Aleppo?");
-
+//        TextView textView = (TextView) findViewById(R.id.issueDescription);
+//        textView.setText("Syria is ripping its prip. With human tolls mounting, how can we judge the resources involved with rising power and humanitarian issues");
+//
 //        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_display_issue);
     }
 

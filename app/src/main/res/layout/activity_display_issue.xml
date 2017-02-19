@@ -20,7 +20,7 @@
         android:id="@+id/card_view"
         android:layout_gravity="top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="30dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
@@ -33,10 +33,10 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
 
-        android:text="What would you do about Aleppo?"
+        android:text="Syria is in turmoil. With human tolls mounting, how can we judge the resources involved ?"
         android:textColor="#9b9999"
-        android:textSize="35sp"
-        android:padding = "20dp"
+        android:textSize="30sp"
+        android:padding = "30dp"
         android:background = "#ffffff"
         android:fontFamily="sans-serif-light"
         android:layout_alignParentStart="true" />

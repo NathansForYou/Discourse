@@ -13,6 +13,7 @@
     android:text="Some text" android:background="@drawable/textbox"
     tools:context="alice.domnom.rippagebalancedbros.discourse.DisplayIssue">
 
+
     <TextView
         android:id="@+id/issueDescription"
         android:layout_width="fill_parent"

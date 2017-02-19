@@ -2,11 +2,6 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-
-    <!--Issues Screen-->
-    <dimen name="button_vertical_padding">15dp</dimen>
-
-    <!--Video Activity-->
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="local_video_size">90dp</dimen>
     <dimen name="local_video_margin">16dp</dimen>

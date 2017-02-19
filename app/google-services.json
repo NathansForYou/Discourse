@@ -15,18 +15,35 @@
       },
       "oauth_client": [
         {
+          "client_id": "367932042469-0okmlg67e2795ajs4a9undootdckf22l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "alice.domnom.rippagebalancedbros.discourse",
+            "certificate_hash": "9B488361C15431D208CC0A1C313013030E94FBE3"
+          }
+        },
+        {
           "client_id": "367932042469-vgt98qelq5laqbpoknabp019dlbek6tb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
-      "api_key": [{ "current_key": "" }],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYR1TnXmVOozmy2t_W58CmtbYrxyHyucE"
+        }
+      ],
       "services": {
         "analytics_service": {
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367932042469-vgt98qelq5laqbpoknabp019dlbek6tb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

@@ -1,1 +1,1 @@
-include ':app', ':quickstart'
+include ':app'
